@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translatex(0);
+    transform: translatex(0);
+  }
+  100% {
+    -webkit-transform: translatex(-50%);
+    transform: translatex(-50%);
+  }
+}
+@-moz-keyframes scroll {
+  0% {
+    -moz-transform: translatex(0);
+    transform: translatex(0);
+  }
+  100% {
+    -moz-transform: translatex(-50%);
+    transform: translatex(-50%);
+  }
+}
+@-o-keyframes scroll {
+  0% {
+    -o-transform: translatex(0);
+    transform: translatex(0);
+  }
+  100% {
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translatex(0);
+    -moz-transform: translatex(0);
+    -o-transform: translatex(0);
+    transform: translatex(0);
+  }
+  100% {
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+  }
+}
+.marquee-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-animation: scroll 30s linear infinite;
+  -moz-animation: scroll 30s linear infinite;
+  -o-animation: scroll 30s linear infinite;
+  animation: scroll 30s linear infinite;
+}
+.marquee-wrapper {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    black 60px,
+    black -webkit-calc(100% - 60px),
+    transparent
+  );
+  -webkit-mask-image: -moz-linear-gradient(
+    left,
+    transparent,
+    black 60px,
+    black -moz-calc(100% - 60px),
+    transparent
+  );
+  -webkit-mask-image: -o-linear-gradient(
+    left,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+  mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    black 60px,
+    black -webkit-calc(100% - 60px),
+    transparent
+  );
+  mask-image: -moz-linear-gradient(
+    left,
+    transparent,
+    black 60px,
+    black -moz-calc(100% - 60px),
+    transparent
+  );
+  mask-image: -o-linear-gradient(
+    left,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 60px,
+    black calc(100% - 60px),
+    transparent
+  );
+}
